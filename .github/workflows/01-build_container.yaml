@@ -59,7 +59,7 @@ jobs:
         run: docker tag ${{ env.IMAGE_NAME }} ${{ env.REGISTRY_IMAGE }}
       
       - name: Push to Azure Container Registry
-        run: docker push ${{ env.REGISTRY_NAME }}
+        run: docker push ${{ env.REGISTRY_IMAGE }}
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
