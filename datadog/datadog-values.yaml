@@ -1,0 +1,26 @@
+datadog:
+  apiKeyExistingSecret: "datadog-secret"
+  clusterName: "aks-free-cluster"
+  logs:
+    enabled: true
+    containerCollectAll: true
+  hostnameForceConfigAsCanonical: false
+  kubelet:
+    tlsVerify: false
+
+agents:
+  useHostPID: true
+
+rbac:
+  create: true
+  serviceAccount:
+    create: true
+
+clusterAgent:
+  enabled: true
+  replicas: 1
+  service:
+    enabled: true
+  metricsProvider:
+    enabled: true
+  createPodDisruptionBudget: true
